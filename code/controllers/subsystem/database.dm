@@ -301,7 +301,7 @@ Delayed insert mode was removed in mysql 7 and only works with MyISAM type table
 	var/timed_out
 	if(!async)
 		start_time = REALTIMEOFDAY
-	Close()
+	// Close()
 	query = connection.BeginQuery(sql)
 	if(!async)
 		timed_out = !query.WaitForCompletion()
